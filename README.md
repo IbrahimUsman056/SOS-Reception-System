@@ -1,68 +1,107 @@
-<div align="center">
-
 # 📦 SOS Reception
 
-A modern **Reception Management System** built with **PHP, MySQL, PDO, JavaScript, Bootstrap, and Chart.js** to digitize package reception, dispatch, and visitor/package tracking for organizations.
+SOS Reception is a modern **Reception Management System** developed to replace traditional paper-based reception logbooks with a secure, efficient, and user-friendly digital solution. It enables organizations to manage incoming and outgoing packages, maintain reception records, monitor deliveries, and generate insightful reports—all from a centralized web application.
 
-Designed to replace traditional paper logbooks with a secure, role-based, and analytics-driven solution.
+The system was developed as an internship project for a security company to streamline front desk operations and improve package tracking across multiple departments and buildings. Instead of manually recording deliveries in registers, receptionists can create digital records, assign tracking information, capture recipient signatures, scan barcodes/QR codes, and notify employees when their packages arrive.
 
-![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge&logo=php)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+Built with **PHP, MySQL, PDO, Bootstrap, JavaScript, and Chart.js**, SOS Reception follows modern web development practices including secure authentication, role-based access control, prepared SQL statements, activity logging, and responsive design.
 
-</div>
+The application supports three different user roles—**Admin**, **Manager**, and **Receptionist**—each with carefully designed permissions to ensure data security while allowing users to perform only the actions relevant to their responsibilities.
+
+Whether you're managing a single office reception or multiple departments, SOS Reception provides an intuitive dashboard, powerful search and filtering, delivery analytics, notification management, and audit logs to simplify daily operations.
+
+---
+
+## ✨ Key Highlights
+
+- 📦 Digital package receiving & dispatch management
+- 👥 Role-Based Access Control (Admin, Manager & Receptionist)
+- 📊 Interactive dashboard with real-time statistics
+- 🔍 Advanced search & filtering
+- 📈 Reports & analytics using Chart.js
+- 📱 QR/Barcode generation and scanning
+- ✍ Digital signature capture
+- 🔔 In-app notifications
+- 📁 File attachment support
+- 📜 Complete activity/audit logging
+- 🔒 Secure authentication using PDO & password hashing
+- 📱 Fully responsive interface
+
+---
+
+# 🚀 Live Demo
+
+**Website**
+
+[https://sosreception.infinityfreeapp.com/](https://sosreception.infinityfreeapp.com/)
+
+## Demo Credentials
+
+| Role | Email | Password |
+|------|-------|----------|
+| 👑 Admin | demo.admin@example.com | Demo@1234 |
+| 🧑‍💼 Manager | demo.manager@example.com | Demo@1234 |
+| 🧑‍💻 Receptionist | demo.reception@example.com | Demo@1234 |
+
+> **Note:** These demo accounts contain sample data for testing different user roles and permissions.
 
 ---
 
 # 📸 Screenshots
 
-## Dashboard
+## Login
 
-![Dashboard](screenshots/dashboard.png)
+<img width="959" height="434" alt="image" src="https://github.com/user-attachments/assets/cb43aefe-d300-4252-ad79-d5ae2c427ba9" />
+
 
 ---
 
-## Login
+## Dashboard
 
-![Login](screenshots/login.png)
+<img width="947" height="539" alt="image" src="https://github.com/user-attachments/assets/f0cbcc6a-3302-4d1b-bb93-83117adaee8a" />
+
 
 ---
 
 ## Reception Records
 
-![Records](screenshots/records.png)
+<img width="944" height="539" alt="image" src="https://github.com/user-attachments/assets/2c92e421-41fd-4234-b6af-f487ea5f6e2c" />
+
 
 ---
 
 ## Add New Package
 
-![Add Package](screenshots/add-package.png)
+<img width="947" height="539" alt="image" src="https://github.com/user-attachments/assets/bc2a7869-799a-4e2f-90f7-df8e161d1666" />
+
 
 ---
 
 ## Package Details
 
-![Details](screenshots/details.png)
+<img width="948" height="539" alt="image" src="https://github.com/user-attachments/assets/b817c9cd-b39a-4c13-932d-99e196353273" />
+
 
 ---
 
 ## Reports & Analytics
 
-![Reports](screenshots/reports.png)
+<img width="945" height="437" alt="image" src="https://github.com/user-attachments/assets/a88efebb-0cc3-46ae-8f12-23a4817de910" />
+
 
 ---
 
 ## QR / Barcode Scanner
 
-![Scanner](screenshots/scanner.png)
+<img width="948" height="438" alt="image" src="https://github.com/user-attachments/assets/5e35020f-f16c-4a2b-984c-0fb68ccd789c" />
+
 
 ---
 
 ## Notifications
 
-![Notifications](screenshots/notifications.png)
+<img width="942" height="440" alt="image" src="https://github.com/user-attachments/assets/16afc39c-45b2-4754-b364-9c87a84da7cb" />
+
 
 ---
 
@@ -189,16 +228,11 @@ Admin can:
 ```
 project/
 │
-├── assets/
 ├── config/
-├── database/
 ├── includes/
 ├── uploads/
-├── views/
-├── auth/
-├── reports/
-├── notifications/
-├── dashboard/
+├── cron/
+├── public/
 ├── index.php
 └── README.md
 ```
@@ -208,7 +242,7 @@ project/
 # 🚀 Installation
 
 ```bash
-git clone https://github.com/yourusername/sos-reception.git
+git clone [https://github.com/yourusername/sos-reception.git](https://github.com/IbrahimUsman056/SOS-Reception-System.git)
 ```
 
 Import the SQL database.
@@ -227,63 +261,11 @@ http://localhost/sos-reception
 
 ---
 
-# 🔑 Demo Accounts
-
-| Role | Email |
-|-------|--------|
-| Admin | demo.admin@example.com |
-| Manager | demo.manager@example.com |
-| Receptionist | demo.reception@example.com |
-
-Password
-
-```
-Demo@1234
-```
-
----
-
-# 🔄 Workflow
-
-```
-Package Arrives
-        │
-        ▼
-Receptionist Creates Record
-        │
-        ▼
-Barcode Generated
-        │
-        ▼
-Notification Sent
-        │
-        ▼
-Manager Monitors
-        │
-        ▼
-Employee Picks Up
-        │
-        ▼
-Signature Captured
-        │
-        ▼
-Status Updated
-        │
-        ▼
-Analytics & Reports
-```
-
----
-
 # 🎯 Future Improvements
 
-- SMS Notifications
-- Cloud Storage
 - Visitor Management
 - Multi-Branch Support
 - Mobile App
-- API Integration
-- OCR Package Detection
 - AI Analytics
 
 ---
@@ -296,14 +278,8 @@ Feel free to fork the repository and submit a Pull Request.
 
 ---
 
-# 📄 License
-
-This project is licensed under the MIT License.
-
----
-
 <div align="center">
 
-Made with ❤️ during Internship
+Made with ❤️ by Ibrahim Usman
 
 </div>
