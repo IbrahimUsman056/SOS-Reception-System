@@ -1,0 +1,8 @@
+# Ideally uploads/ lives entirely outside the webroot. If it's ever
+# reachable under a web path, this stops script execution and blocks
+# directory listing.
+php_flag engine off
+<FilesMatch "\.(php|phtml|php\d)$">
+    Require all denied
+</FilesMatch>
+Options -Indexes

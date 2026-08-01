@@ -1,0 +1,17 @@
+# Secrets — never commit these
+config/secrets.php
+seed_credentials.csv
+
+# Dependencies — reinstalled via composer, don't need to be in git
+vendor/
+
+# Debug/test files
+debug_check.php
+ping.php
+test_mail.php
+test_sms.php
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+.vscode/
