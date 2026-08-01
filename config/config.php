@@ -5,16 +5,16 @@
 require_once __DIR__ . '/../includes/security_headers.php';
 
 // ---- Email (Gmail SMTP) ---------------------------------------------------
-putenv('SMTP_USER=ibrahiman2468@gmail.com');
-putenv('SMTP_PASS=ihozkguxvuigitff'); // Google Account → Security → App Passwords
+putenv('SMTP_USER=your-gmail');
+putenv('SMTP_PASS=gmail-app-password'); // Google Account → Security → App Passwords
 
 // ---- SMS (TextBee) -----------------------------------------------------------
-putenv('TEXTBEE_API_KEY=40b7cf91-3151-44b8-98ee-d73a87096429');
-putenv('TEXTBEE_DEVICE_ID=6a6cd96b25b54ad14bef5b04');
+putenv('TEXTBEE_API_KEY=api-key');
+putenv('TEXTBEE_DEVICE_ID=device-id');
 
-define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
-define('DB_NAME', getenv('DB_NAME') ?: 'reception');
-define('DB_USER', getenv('DB_USER') ?: 'root');
+define('DB_HOST', getenv('DB_HOST') ?: '');
+define('DB_NAME', getenv('DB_NAME') ?: '');
+define('DB_USER', getenv('DB_USER') ?: '');
 define('DB_PASS', getenv('DB_PASS') ?: '');
 define('DB_CHARSET', 'utf8mb4');
 
