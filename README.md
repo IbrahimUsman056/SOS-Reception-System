@@ -37,11 +37,12 @@ Whether you're managing a single office reception or multiple departments, SOS R
 
 ## Demo Credentials
 
-| Role | Email | Password |
-|------|-------|----------|
-| 👑 Admin | demo.admin@example.com | Demo@1234 |
-| 🧑‍💼 Manager | demo.manager@example.com | Demo@1234 |
-| 🧑‍💻 Receptionist | demo.reception@example.com | Demo@1234 |
+Admin
+ Email: babarazam@sosreception.com , Pwd: babarazamadmin1
+Manager
+ Email: rohitsharma@sosreception.com , Pwd: rohitsharmamanager5
+Receptionist
+ Email: shadabkhan@sosreception.com , Pwd: shadabkhanreceptionist16
 
 > **Note:** These demo accounts contain sample data for testing different user roles and permissions.
 
